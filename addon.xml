@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.7-alpha5" provider-name="burpnoes">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.7" provider-name="burpnoes">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.simplejson" version="2.0.10"/>
