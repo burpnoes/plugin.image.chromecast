@@ -1,6 +1,9 @@
 ﻿# -*- coding: utf-8 -*-
 import sys
-import simplejson
+try:
+    import simplejson
+except ImportError:
+    import json as simplejson
 import urllib2
 
 import xbmcgui
@@ -33,7 +36,7 @@ def showPictures():
     for picture in pictures:
         name = picture['name']
         iconimage = SERVICE_URL + '/images/240_' + picture['name']
-        full_image_path = images_paths[IMAGE_SIZE] if IMAGE_SIZE else image_sizes['2']
+        full_image_path = images_paths[IMAGE_SIZE] if IMAGE_SIZE else images_paths['2']
         url = SERVICE_URL + full_image_path + picture['name']
 
         item = xbmcgui.ListItem(name, iconImage = "DefaultImage.png", thumbnailImage = iconimage)
