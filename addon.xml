@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.image.990px.random" name="990px Random" version="1.1.0" provider-name="smuto">
+<addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.4" provider-name="burpnoes">
     <requires>
 	<import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.simplejson" version="2.0.10"/>
@@ -9,10 +9,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
 	<platform>all</platform>
-	<summary lang="en">990px</summary>
-	<summary lang="pl">990px.pl – fotoreportaże, galerie zdjęć, fotografia cyfrowa</summary>
-	<description lang="en">990px</description>
-	<description lang="pl">Losowo wybrana galeria. Może w ten sposób traficie na temat, którego wcześniej nie udało wam się sprawdzić.</description>
+	<summary lang="en">Chromecast Image Plugin</summary>
+	<description lang="en">Kodi Image Plugin for Chromecast Backgrounds</description>
 	<disclaimer lang="en"></disclaimer>
     </extension>
 </addon>
