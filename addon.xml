@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.6" provider-name="burpnoes">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.7-alpha5" provider-name="burpnoes">
     <requires>
-	<import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
-	<provides>image</provides>
+        <provides>image</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-	<platform>all</platform>
-	<summary lang="en">Chromecast Image Plugin</summary>
-	<description lang="en">Kodi Image Plugin for Chromecast Backgrounds</description>
-	<disclaimer lang="en"/>
+        <summary>Chromecast Image Plugin</summary>
+        <description>Kodi Image Plugin for Chromecast Backgrounds</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     </extension>
 </addon>

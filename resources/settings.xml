@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="image_size" type="enum" label="Image Size" values="320x240|1920x1080|1920x1200" default="1"/>
+</settings>

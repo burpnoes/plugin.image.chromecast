@@ -4,13 +4,25 @@ import simplejson
 import urllib2
 
 import xbmcgui
+import xbmcaddon
 import xbmcplugin
 
 SERVICE_URL = 'http://chromecastbg.alexmeub.com'
 
 CHANNELS_URL = SERVICE_URL + '/images.v4.json'
 
+ADDON = xbmcaddon.Addon()
+IMAGE_SIZE = ADDON.getSetting('image_size')
+
+
 def showPictures():
+
+    images_paths = {
+        '0': '/images/240_',
+        '1': '/images/1080_',
+        '2': '/images/1200_'
+    }
+
     u = urllib2.urlopen(CHANNELS_URL)
     data = u.read()
     u.close()
@@ -19,16 +31,16 @@ def showPictures():
     pictures = result
 
     for picture in pictures:
+        name = picture['name']
+        iconimage = SERVICE_URL + '/images/240_' + picture['name']
+        full_image_path = images_paths[IMAGE_SIZE] if IMAGE_SIZE else image_sizes['2']
+        url = SERVICE_URL + full_image_path + picture['name']
 
-        item = xbmcgui.ListItem(picture['name'], iconImage = SERVICE_URL + '/images/240_' + picture['name'])
+        item = xbmcgui.ListItem(name, iconImage = "DefaultImage.png", thumbnailImage = iconimage)
 
-        item.setInfo('pictures', {
-            'title': 'By ' + picture['photographer']
-        });
+        item.setInfo( type = 'image', infoLabels = {"Title": 'By ' + picture['photographer'] })
 
-        full_image_path = '/images/1080_'
-
-        xbmcplugin.addDirectoryItem(HANDLE, SERVICE_URL + full_image_path + picture['name'], item)
+        xbmcplugin.addDirectoryItem(handle = HANDLE, url=url, listitem=item, isFolder=False, totalItems=0)
 
     xbmcplugin.endOfDirectory(HANDLE)
 
