@@ -6,7 +6,9 @@ import urllib2
 import xbmcgui
 import xbmcplugin
 
-CHANNELS_URL = 'http://chromecastbg.alexmeub.com/images.v4.json'
+SERVICE_URL = 'http://chromecastbg.alexmeub.com'
+
+CHANNELS_URL = SERVICE_URL + '/images.v4.json'
 
 def showPictures():
     u = urllib2.urlopen(CHANNELS_URL)
@@ -18,13 +20,15 @@ def showPictures():
 
     for picture in pictures:
 
-        item = xbmcgui.ListItem(picture['name'], iconImage = 'http://chromecastbg.alexmeub.com/images/240_' + picture['name'])
+        item = xbmcgui.ListItem(picture['name'], iconImage = SERVICE_URL + '/images/240_' + picture['name'])
 
-        itm.setInfo('pictures', {
+        item.setInfo('pictures', {
             'title': 'By ' + picture['photographer']
         });
 
-        xbmcplugin.addDirectoryItem(HANDLE, 'http://chromecastbg.alexmeub.com/images/1080_' + picture['name'], item)
+        full_image_path = '/images/1080_'
+
+        xbmcplugin.addDirectoryItem(HANDLE, SERVICE_URL + full_image_path + picture['name'], item)
 
     xbmcplugin.endOfDirectory(HANDLE)
 

@@ -1,3 +1,8 @@
-﻿[B]Version 0.1.5[/B]
+﻿[B]Version 0.1.6[/B]
+
+- Fix item.setInfo
+
+
+[B]Version 0.1.5[/B]
 
 - Initial version
