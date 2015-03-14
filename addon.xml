@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.6" provider-name="burpnoes">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><addon id="plugin.image.chromecast" name="Chromecast Image Plugin" version="0.1.6" provider-name="burpnoes">
     <requires>
 	<import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.simplejson" version="2.0.10"/>
@@ -11,6 +10,6 @@
 	<platform>all</platform>
 	<summary lang="en">Chromecast Image Plugin</summary>
 	<description lang="en">Kodi Image Plugin for Chromecast Backgrounds</description>
-	<disclaimer lang="en"></disclaimer>
+	<disclaimer lang="en"/>
     </extension>
 </addon>
