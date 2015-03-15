@@ -1,8 +1,10 @@
-0.1.8 - by burpnoes (14/03/2015)
+[B]Version 0.1.8[/B]
 - Fix Plugin Slideshow integration errors
 
-0.1.7 - by burpnoes (14/03/2015)
+
+[B]Version 0.1.7[/B]
 - Add settings configuration for image size
+
 
 ﻿[B]Version 0.1.6[/B]
 
